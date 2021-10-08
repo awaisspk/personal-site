@@ -1,7 +1,7 @@
 import { styled } from "@stitchesConfig";
 import React from "react";
 
-const Layout: React.FC = ({ children }) => {
+export const Layout: React.FC = ({ children }) => {
   return (
     <Wrapper>
       {/*Header*/}
@@ -10,8 +10,6 @@ const Layout: React.FC = ({ children }) => {
     </Wrapper>
   );
 };
-
-export default Layout;
 
 const Wrapper = styled("main", {
   // background : ""
