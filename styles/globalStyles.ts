@@ -5,6 +5,15 @@ import { opinionated } from "stitches-normalize-css";
 export const globalStyles = globalCss(...opinionated, {
   body: {
     backgroundColor: "$bg",
+    transition: "0.5s",
+    fontFamily: "Inter",
+  },
+  "&:focus:not(:focus-visible)": {
+    outline: 0,
+  },
+  "&:focus-visible": {
+    outline: "2px solid $colors$main",
+    // backgroundColor : ''
   },
   "@font-face": [
     {

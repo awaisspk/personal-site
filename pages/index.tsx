@@ -1,12 +1,13 @@
-import { ThemeToggle } from "@src/components/Button/ThemeToggle";
+import { LightDarkSwitcher } from "@src/components/Button/ThemeToggle";
+import { Logo } from "@src/components/Header/Logo";
 import { styled } from "@stitchesConfig";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Text>My personal site</Text>
-      <ThemeToggle />
+      <Logo />
+      <LightDarkSwitcher />
     </div>
   );
 };
