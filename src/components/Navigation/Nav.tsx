@@ -1,5 +1,5 @@
 import { styled } from "@stitchesConfig";
-import { motion, useTransform, useAnimation, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 
 export const Navigation = () => {
@@ -46,7 +46,7 @@ export const Navigation = () => {
               <path
                 d="M 2 12 L 16 7.00129 L 30 12" //animate value 7.00129
                 fill="transparent"
-                stroke="rgba(255, 255, 255, 1)" // animate color to pink
+                stroke="rgba(255, 255, 255, 1)" // animate color
               ></path>
             </svg>
           </SvgContainer>
