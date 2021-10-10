@@ -1,5 +1,5 @@
 import { Header } from "@src/components/Header";
-import { Navigation } from "@src/components/Navigation/Nav";
+import { Navigation } from "@src/components/Navigation";
 import { styled } from "@stitchesConfig";
 import React from "react";
 
