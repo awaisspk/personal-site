@@ -1,13 +1,13 @@
 import { Header } from "@src/components/Header";
+import { Navigation } from "@src/components/Navigation/Nav";
 import { styled } from "@stitchesConfig";
 import React from "react";
 
 export const Layout: React.FC = ({ children }) => {
   return (
     <Wrapper>
-      <Header />
-      {children}
       {/*Footer*/}
+      <Navigation />
     </Wrapper>
   );
 };
