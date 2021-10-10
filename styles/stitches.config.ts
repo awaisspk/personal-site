@@ -13,9 +13,19 @@ const stitchesConfig = createStitches({
       "typeface-sec": "#626b84",
       "typeface-ter": "#575f75",
     },
+    shadows: {
+      shadow1: "0 0px 10px -6px rgba(0, 24, 40, 0.3)",
+      shadow2: "0 0px 15px -6px rgba(0, 24, 40, 0.4)",
+      shadow3: "0 0px 20px -6px rgba(0, 24, 40, 0.5)",
+    },
   },
+
   media: {
     dark: "(prefers-color-scheme: dark)",
+    bp1: "(min-width: 400px)",
+    bp2: "(min-width: 640px)",
+    bp3: "(min-width: 768px)",
+    bp4: "(min-width: 1024px)",
   },
 });
 
@@ -30,5 +40,11 @@ export const DarkTheme = stitchesConfig.createTheme("dark", {
     "typeface-pri": "#e8e8fd",
     "typeface-sec": "#98a0b3",
     "typeface-ter": "#c4c9d4",
+  },
+
+  shadows: {
+    shadow1: "0 0px 20px -6px rgba(0, 0, 0, 0.7);",
+    shadow2: "0 0px 25px -6px rgba(0, 0, 0, 0.8);",
+    shadow3: "0 0px 30px -6px rgba(0, 0, 0, 0.9);",
   },
 });

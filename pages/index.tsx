@@ -1,20 +1,30 @@
-import { LightDarkSwitcher } from "@src/components/Button/ThemeToggle";
-import { Logo } from "@src/components/Header/Logo";
 import { styled } from "@stitchesConfig";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Logo />
-      <LightDarkSwitcher />
-    </div>
+    <Container>
+      <h1>Home page</h1>
+      <p>
+        llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum
+      </p>
+    </Container>
   );
 };
 
 export default Home;
 
-const Text = styled("h1", {
-  fontFamily: "Inter",
-  fontWeight: "500",
+const Container = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "auto 700px auto",
+  paddingTop: "250px",
+  "& *": {
+    gridColumn: "2",
+  },
 });

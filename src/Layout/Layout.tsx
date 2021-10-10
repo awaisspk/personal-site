@@ -1,4 +1,4 @@
-import { Header } from "@src/components/Header/Header";
+import { Header } from "@src/components/Header";
 import { styled } from "@stitchesConfig";
 import React from "react";
 

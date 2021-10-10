@@ -1,1 +1,1 @@
-export { ThemeToggle } from "./ThemeToggle";
+export { ToggleDarkTheme } from "./ThemeToggle";

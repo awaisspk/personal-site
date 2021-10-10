@@ -3,17 +3,26 @@ import { opinionated } from "stitches-normalize-css";
 
 //@ts-ignore
 export const globalStyles = globalCss(...opinionated, {
+  "*": { margin: "0", padding: "0" },
   body: {
     backgroundColor: "$bg",
     transition: "0.5s",
     fontFamily: "Inter",
   },
+  main: {
+    minHeight: "200vh",
+  },
+
   "&:focus:not(:focus-visible)": {
     outline: 0,
   },
   "&:focus-visible": {
     outline: "2px solid $colors$main",
     // backgroundColor : ''
+  },
+  "::selection": {
+    backgroundColor: "#1c2230",
+    color: "$typeface-sec",
   },
   "@font-face": [
     {
