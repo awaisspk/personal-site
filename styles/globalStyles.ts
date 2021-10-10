@@ -9,9 +9,7 @@ export const globalStyles = globalCss(...opinionated, {
     transition: "0.5s",
     fontFamily: "Inter",
   },
-  main: {
-    minHeight: "200vh",
-  },
+  main: {},
 
   "&:focus:not(:focus-visible)": {
     outline: 0,
