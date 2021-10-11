@@ -1,10 +1,9 @@
-import useProgress from "@src/hooks/useProgress";
-import { motion } from "framer-motion";
-import useScrollCount from "@src/hooks/useScrollCount";
-import { styled, css } from "@stitchesConfig";
-import { Header } from "@components/Header/Header";
+import {motion} from 'framer-motion';
+import useScrollCount from '@src/hooks/useScrollCount';
+import {styled} from '@stitchesConfig';
+import {Header} from '@components/Header/Header';
 
-export const Wrapper: React.FC = (props) => {
+export const Wrapper: React.FC = () => {
   const shouldCollapse = useScrollCount(150);
 
   const variants = {
@@ -18,7 +17,7 @@ export const Wrapper: React.FC = (props) => {
   return (
     <Container
       css={{
-        boxShadow: shouldCollapse ? "$shadow1" : "0",
+        boxShadow: shouldCollapse ? '$shadow1' : '0',
       }}
     >
       <HeaderWrapper
@@ -26,7 +25,7 @@ export const Wrapper: React.FC = (props) => {
         animate="collapsed"
         variants={variants}
         custom={shouldCollapse}
-        transition={{ ease: "easeInOut", duration: 0.5 }}
+        transition={{ease: 'easeInOut', duration: 0.5}}
       >
         <Header />
       </HeaderWrapper>
@@ -35,22 +34,22 @@ export const Wrapper: React.FC = (props) => {
 };
 
 const HeaderWrapper = styled(motion.div, {
-  transition: "background 0.5s",
-  height: "inherit",
-  gridColumn: "2",
-  backgroundColor: "$bg",
+  transition: 'background 0.5s',
+  height: 'inherit',
+  gridColumn: '2',
+  backgroundColor: '$bg',
 });
 
-const Container = styled("div", {
-  position: "fixed",
-  width: "100%",
-  zIndex: "9",
-  opacity: "0.88",
+const Container = styled('div', {
+  position: 'fixed',
+  width: '100%',
+  zIndex: '9',
+  opacity: '0.88',
 
   variants: {
     color: {
       blue: {
-        backgroundColor: "$bg",
+        backgroundColor: '$bg',
       },
     },
   },

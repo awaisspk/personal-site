@@ -22,7 +22,7 @@ const stitchesConfig = createStitches({
 
   media: {
     dark: "(prefers-color-scheme: dark)",
-    bp1: "(min-width: 400px)",
+    bp1: "(min-width: 420px)",
     bp2: "(min-width: 640px)",
     bp3: "(min-width: 768px)",
     bp4: "(min-width: 1024px)",

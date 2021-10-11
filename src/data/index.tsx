@@ -1,1 +1,1 @@
-export { navLinks, socialLinks } from "./navLinks";
+export {navLinks, socialLinks} from './navLinks';
