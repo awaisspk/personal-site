@@ -3,9 +3,13 @@ import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import { navLinks, socialLinks } from "@src/data";
 import Link from "next/link";
+import { useMediaQuery } from "react-responsive";
 
 export const MobileNav = () => {
   const [isActive, setIsActive] = useState(false);
+  const isMobile = useMediaQuery({
+    query: "(max-width : 420px)",
+  });
 
   const ArrowVarients: Variants = {
     open: {
@@ -31,69 +35,71 @@ export const MobileNav = () => {
 
   return (
     <>
-      <Wrapper
-        drag="y"
-        dragConstraints={{ top: 0, bottom: 0 }}
-        dragElastic={{ top: 0, bottom: 0.3 }}
-        onDragEnd={(_, info) => {
-          if (info.offset.y > 10) setIsActive(false);
-        }}
-        style={{
-          pointerEvents: isActive ? "all" : "none",
-        }}
-      >
-        <motion.div
-          initial={{ y: "95%" }}
-          animate={{ opacity: 1, y: isActive ? 0 : "95%" }}
+      {isMobile && (
+        <Wrapper
+          drag="y"
+          dragConstraints={{ top: 0, bottom: 0 }}
+          dragElastic={{ top: 0, bottom: 0.3 }}
+          onDragEnd={(_, info) => {
+            if (info.offset.y > 10) setIsActive(false);
+          }}
           style={{
-            pointerEvents: "all",
-            height: "100%",
+            pointerEvents: isActive ? "all" : "none",
           }}
         >
-          <SvgContainer
-            initial="close"
-            variants={ArrowVarients}
-            animate={isActive ? "open" : "close"}
-            onClick={() => setIsActive(true)}
+          <motion.div
+            initial={{ y: "95%" }}
+            animate={{ opacity: 1, y: isActive ? 0 : "95%" }}
+            style={{
+              pointerEvents: "all",
+              height: "100%",
+            }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 32 24"
-              width="100%"
-              strokeWidth="5px"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+            <SvgContainer
+              initial="close"
+              variants={ArrowVarients}
+              animate={isActive ? "open" : "close"}
+              onClick={() => setIsActive(true)}
             >
-              <motion.path
-                fill="transparent"
-                animate={isActive ? "line" : "arrow"}
-                variants={pathVarients}
-              ></motion.path>
-            </svg>
-          </SvgContainer>
-          <Navigation>
-            {navLinks.map((link, index) => (
-              <Link href={link.route}>
-                <a onClick={() => setIsActive(false)} key={index}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 24"
+                width="100%"
+                strokeWidth="5px"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <motion.path
+                  fill="transparent"
+                  animate={isActive ? "line" : "arrow"}
+                  variants={pathVarients}
+                ></motion.path>
+              </svg>
+            </SvgContainer>
+            <Navigation>
+              {navLinks.map((link, index) => (
+                <Link href={link.route} key={index}>
+                  <a onClick={() => setIsActive(false)}>{link.name}</a>
+                </Link>
+              ))}
+              {socialLinks.map((link, index) => (
+                <a href={link.route} key={index}>
                   {link.name}
                 </a>
-              </Link>
-            ))}
-            {socialLinks.map((link, index) => (
-              <a href={link.route} key={index}>
-                {link.name}
-              </a>
-            ))}
-          </Navigation>
-        </motion.div>
-      </Wrapper>
-      <Overlay
-        style={{
-          pointerEvents: isActive ? "all" : "none",
-        }}
-        onClick={() => setIsActive(false)}
-        animate={{ opacity: isActive ? 1 : 0 }}
-      />
+              ))}
+            </Navigation>
+          </motion.div>
+        </Wrapper>
+      )}
+      {isMobile && (
+        <Overlay
+          style={{
+            pointerEvents: isActive ? "all" : "none",
+          }}
+          onClick={() => setIsActive(false)}
+          animate={{ opacity: isActive ? 1 : 0 }}
+        />
+      )}
     </>
   );
 };
@@ -121,7 +127,7 @@ const Wrapper = styled(motion.div, {
   height: "50%",
   bottom: 0,
   left: 0,
-  zIndex: 11,
+  zIndex: 12,
 });
 
 const Overlay = styled(motion.div, {
@@ -131,5 +137,5 @@ const Overlay = styled(motion.div, {
   left: 0,
   right: 0,
   background: "rgba(0, 0, 0, 0.7)",
-  zIndex: 10,
+  zIndex: 11,
 });
