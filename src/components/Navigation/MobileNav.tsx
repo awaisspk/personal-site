@@ -42,6 +42,7 @@ export const MobileNav = () => {
         }}
       >
         <motion.div
+          initial={{ y: "95%" }}
           animate={{ opacity: 1, y: isActive ? 0 : "95%" }}
           style={{
             pointerEvents: "all",
@@ -49,7 +50,7 @@ export const MobileNav = () => {
           }}
         >
           <SvgContainer
-            initial="open"
+            initial="close"
             variants={ArrowVarients}
             animate={isActive ? "open" : "close"}
             onClick={() => setIsActive(true)}
@@ -104,7 +105,6 @@ const Navigation = styled(motion.nav, {
   padding: "2em",
   background: "white",
   borderRadius: "1rem",
-  // backgroundColor: "Blue",
   display: "grid",
   gridTemplateRows: "1fr 1fr",
   gridTemplateColumns: "1fr 1fr 1fr",
