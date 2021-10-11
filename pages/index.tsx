@@ -22,7 +22,7 @@ export default Home;
 
 const Container = styled("div", {
   display: "grid",
-  gridTemplateColumns: "auto 700px auto",
+  gridTemplateColumns: "auto 1fr auto",
   paddingTop: "250px",
   "& *": {
     gridColumn: "2",
