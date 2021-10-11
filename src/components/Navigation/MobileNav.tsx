@@ -1,6 +1,8 @@
 import { styled } from "@stitchesConfig";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
+import { navLinks, socialLinks } from "@src/data";
+import Link from "next/link";
 
 export const MobileNav = () => {
   const [isActive, setIsActive] = useState(false);
@@ -8,11 +10,24 @@ export const MobileNav = () => {
   const ArrowVarients: Variants = {
     open: {
       y: "100%",
+      d: "M 2 12 L 16 7.00129 L 30 12",
     },
     close: {
       y: "-80%",
+      d: "M 2 12 L 16 12.00129 L 30 12",
     },
   };
+  const pathVarients: Variants = {
+    arrow: {
+      d: "M 2 12 L 16 7.00129 L 30 12",
+      stroke: "rgba(255, 255, 255, 1)", // animate color
+    },
+    line: {
+      d: "M 2 12 L 16 12.00129 L 30 12",
+      stroke: "rgba(0, 0, 255, 1)", // animate color
+    },
+  };
+
   return (
     <>
       <Wrapper
@@ -48,14 +63,21 @@ export const MobileNav = () => {
               strokeLinejoin="round"
             >
               <motion.path
-                d="M 2 12 L 16 7.00129 L 30 12" //animate value 7.00129
                 fill="transparent"
-                stroke="rgba(255, 255, 255, 1)" // animate color
+                animate={isActive ? "line" : "arrow"}
+                variants={pathVarients}
               ></motion.path>
             </svg>
           </SvgContainer>
           <Navigation>
-            <h1 style={{ color: "Black" }}>Mobile Nav</h1>
+            {navLinks.map((link) => (
+              <Link href={link.route}>
+                <a onClick={() => setIsActive(false)}>{link.name}</a>
+              </Link>
+            ))}
+            {socialLinks.map((link) => (
+              <a href={link.route}>{link.name}</a>
+            ))}
           </Navigation>
         </motion.div>
       </Wrapper>
@@ -76,11 +98,16 @@ const SvgContainer = styled(motion.div, {
 });
 
 const Navigation = styled(motion.nav, {
-  height: "calc(100% + 300px)",
+  height: "100%",
   padding: "2em",
-  paddingBottom: "300px",
   background: "white",
   borderRadius: "1rem",
+  // backgroundColor: "Blue",
+  display: "grid",
+  gridTemplateRows: "1fr 1fr",
+  gridTemplateColumns: "1fr 1fr 1fr",
+  placeItems: "center",
+  placeContent: "center",
 });
 
 const Wrapper = styled(motion.div, {
