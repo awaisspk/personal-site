@@ -18,7 +18,7 @@ export const navLinks = [
 export const socialLinks = [
   {
     name: "twitter",
-    route: "#",
+    route: "https://twitter.com/iamawaisiqbal",
   },
 
   {

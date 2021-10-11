@@ -70,13 +70,15 @@ export const MobileNav = () => {
             </svg>
           </SvgContainer>
           <Navigation>
-            {navLinks.map((link) => (
-              <Link href={link.route}>
+            {navLinks.map((link, index) => (
+              <Link href={link.route} key={index}>
                 <a onClick={() => setIsActive(false)}>{link.name}</a>
               </Link>
             ))}
-            {socialLinks.map((link) => (
-              <a href={link.route}>{link.name}</a>
+            {socialLinks.map((link, index) => (
+              <a href={link.route} key={index}>
+                {link.name}
+              </a>
             ))}
           </Navigation>
         </motion.div>
