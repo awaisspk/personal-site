@@ -1,6 +1,5 @@
 import { Header } from "@src/components/Header";
-import { Navigation } from "@src/components/Navigation";
-import { MobileNav } from "@src/components/Navigation/MobileNav";
+import { MobileNav } from "@src/components/Navigation";
 import { styled } from "@stitchesConfig";
 import React from "react";
 
