@@ -1,71 +1,81 @@
-import { styled } from "@stitches/react";
-import { useEffect, useState } from "react";
+import { styled } from "@stitchesConfig";
+import { ToggleDarkTheme } from "../Button";
+import Link from "next/link";
+import { Logo } from "./Logo";
+import { useMediaQuery } from "react-responsive";
 
 export const Header = () => {
-  const [windowDimention, setWindowDimention] = useState<number>(1024);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowDimention(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const isMobile = windowDimention <= 450;
+  const isMobile = useMediaQuery({
+    query: "(min-width: 420px)",
+  });
 
   return (
-    <Container>
-      {isMobile ? (
-        <div>Mobile navigation</div>
-      ) : (
-        <Navbar.Wrapper>
-          <Navbar.Logo>Awais.</Navbar.Logo>
-          <Navbar.Items>
-            <Navbar.Item>Home</Navbar.Item>
-            <Navbar.Item>Blog</Navbar.Item>
-            <Navbar.Item>About</Navbar.Item>
-          </Navbar.Items>
-        </Navbar.Wrapper>
-      )}
-    </Container>
+    <Grid>
+      <Flex>
+        <Logo />
+        <Nav>
+          {isMobile && (
+            <Links>
+              <li>
+                <Link href="/" scroll={false}>
+                  <a>Home</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/blog" scroll={false}>
+                  <a>Blog</a>
+                </Link>
+              </li>
+
+              <li>
+                <Link href="/about" scroll={false}>
+                  <a>About</a>
+                </Link>
+              </li>
+            </Links>
+          )}
+
+          <ToggleDarkTheme />
+        </Nav>
+      </Flex>
+    </Grid>
   );
 };
 
-const Container = styled("div", {
-  display: "flex",
-  backgroundColor: "#eeeeee",
-  height: "100vh",
+const Grid = styled("div", {
+  display: "Grid",
+  gridTemplateColumns: "10px 1fr 10px",
+  maxWidth: "900",
+  alignItems: "center",
+  height: "inherit",
+  "@bp1": {
+    gridTemplateColumns: "1fr 4fr 1fr",
+  },
 });
 
-const StyledWrapper = styled("nav", {
-  flex: "1",
-  alignSelf: "flex-start",
-  padding: "1rem 3rem",
+const Flex = styled("header", {
+  gridColumn: "2",
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  backgroundColor: "white",
+  height: "inherit",
 });
 
-const StyledLogo = styled("h3", {
-  border: "1px solid gray",
-  padding: "0.5rem 1rem",
-});
-
-const styledItems = styled("ul", {
+const Nav = styled("nav", {
   display: "flex",
+  alignItems: "center",
+  gap: "20px",
+});
+
+const Links = styled("ul", {
   listStyle: "none",
-});
+  display: "flex",
 
-const styledItem = styled("li", {
-  padding: "0 1rem",
-  cursor: "pointer",
+  "& a": {
+    textDecoration: "none",
+    color: "$typeface-pri",
+    padding: "4px 10px",
+    userSelect: "none",
+  },
 });
-
-const Navbar = {
-  Wrapper: StyledWrapper,
-  Items: styledItems,
-  Item: styledItem,
-  Logo: StyledLogo,
-};

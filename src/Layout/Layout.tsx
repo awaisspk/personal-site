@@ -8,6 +8,7 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <Wrapper>
       {/*Footer*/}
+      <Header />
       {children}
       <MobileNav />
     </Wrapper>

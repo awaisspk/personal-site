@@ -17,6 +17,7 @@ export const MobileNav = () => {
       d: "M 2 12 L 16 12.00129 L 30 12",
     },
   };
+
   const pathVarients: Variants = {
     arrow: {
       d: "M 2 12 L 16 7.00129 L 30 12",
@@ -87,7 +88,7 @@ export const MobileNav = () => {
         </motion.div>
       </Wrapper>
       <Overlay
-        css={{
+        style={{
           pointerEvents: isActive ? "all" : "none",
         }}
         onClick={() => setIsActive(false)}
@@ -120,7 +121,7 @@ const Wrapper = styled(motion.div, {
   height: "50%",
   bottom: 0,
   left: 0,
-  zIndex: 10,
+  zIndex: 11,
 });
 
 const Overlay = styled(motion.div, {
@@ -130,5 +131,5 @@ const Overlay = styled(motion.div, {
   left: 0,
   right: 0,
   background: "rgba(0, 0, 0, 0.7)",
-  zIndex: 1,
+  zIndex: 10,
 });
