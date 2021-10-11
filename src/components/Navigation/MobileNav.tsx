@@ -97,6 +97,7 @@ export const MobileNav = () => {
             pointerEvents: isActive ? "all" : "none",
           }}
           onClick={() => setIsActive(false)}
+          initial={{ opacity: 0 }}
           animate={{ opacity: isActive ? 1 : 0 }}
         />
       )}
