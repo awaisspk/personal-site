@@ -72,8 +72,10 @@ export const MobileNav = () => {
           </SvgContainer>
           <Navigation>
             {navLinks.map((link, index) => (
-              <Link href={link.route} key={index}>
-                <a onClick={() => setIsActive(false)}>{link.name}</a>
+              <Link href={link.route}>
+                <a onClick={() => setIsActive(false)} key={index}>
+                  {link.name}
+                </a>
               </Link>
             ))}
             {socialLinks.map((link, index) => (
