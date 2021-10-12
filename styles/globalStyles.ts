@@ -8,6 +8,7 @@ export const globalStyles = globalCss(...opinionated, {
     backgroundColor: "$bg",
     transition: "0.5s",
     fontFamily: "Inter",
+    color: "$typeface-pri",
   },
   main: {},
 
@@ -43,3 +44,7 @@ export const globalStyles = globalCss(...opinionated, {
     },
   ],
 });
+
+// when it feels scary to jump in.That's exactly the moment you jump otherwise you
+// end up staying in the same  place your whole life
+

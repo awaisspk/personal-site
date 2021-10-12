@@ -6,12 +6,33 @@ const Home: NextPage = () => {
     <Container>
       <h1>Home page</h1>
       <p>
-        llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumorem ipsum
+        llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem llorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumorem ipsum ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumorem ipsum ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
+        ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum
       </p>
     </Container>
   );
