@@ -1,3 +1,4 @@
+import { CodeBlock } from "@src/components/MDX/Code/CodeBlock";
 import { styled } from "@stitchesConfig";
 import type { NextPage } from "next";
 
@@ -5,35 +6,7 @@ const Home: NextPage = () => {
   return (
     <Container>
       <h1>Home page</h1>
-      <p>
-        llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem llorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem llorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumorem ipsum ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumorem ipsum ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-        ipsumlorem ipsumlorem ipsumlorem ipsumorem ipsum
-      </p>
+      <CodeBlock />
     </Container>
   );
 };
