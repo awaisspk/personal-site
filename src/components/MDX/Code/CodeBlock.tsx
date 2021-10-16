@@ -1,6 +1,6 @@
-import { styled } from "@stitchesConfig";
-import Hightlight, { defaultProps } from "prism-react-renderer";
-import dracula from "prism-react-renderer/themes/nightOwl";
+import { styled } from '@stitchesConfig';
+import Hightlight, { defaultProps } from 'prism-react-renderer';
+import dracula from 'prism-react-renderer/themes/nightOwl';
 
 const exampleCode = `
  (function someDemo() {
@@ -24,9 +24,9 @@ export const CodeBlock = () => {
           className={className}
           style={{
             ...style,
-            backgroundColor: "rgba(0, 0, 0, 0.9)",
-            borderRadius: "10px",
-            padding: "4px 20px",
+            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            borderRadius: '10px',
+            padding: '4px 20px',
           }}
         >
           {tokens.map((line, i) => (
@@ -42,7 +42,7 @@ export const CodeBlock = () => {
   );
 };
 
-const Pre = styled("pre", {
-  fontFamily: "fira Code",
-  fontWeight: "bold",
+const Pre = styled('pre', {
+  fontFamily: 'fira Code',
+  fontWeight: 'bold',
 });

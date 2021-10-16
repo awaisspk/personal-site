@@ -1,4 +1,4 @@
-import {styled} from '@stitchesConfig';
+import { styled } from '@stitchesConfig';
 import Link from 'next/link';
 
 export const Logo = () => {
@@ -14,9 +14,9 @@ export const Logo = () => {
 };
 
 const Text = styled('h2', {
-  'fontFamily': 'Inter',
-  'userSelect': 'none',
-  'cursor': 'pointer',
+  fontFamily: 'Inter',
+  userSelect: 'none',
+  cursor: 'pointer',
   '& a': {
     textDecoration: 'none',
     color: '$typeface-pri',

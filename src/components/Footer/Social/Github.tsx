@@ -1,10 +1,10 @@
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 type TProps = {
   url: string;
 };
 
-export const Github = ({url}: TProps) => {
+export const Github = ({ url }: TProps) => {
   return (
     <a href={url} target="_blank" rel="noreferrer">
       <svg

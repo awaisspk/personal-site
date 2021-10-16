@@ -1,8 +1,8 @@
-import {styled} from '@stitchesConfig';
-import {ToggleDarkTheme} from '../Button';
+import { styled } from '@stitchesConfig';
+import { ToggleDarkTheme } from '../Button';
 import Link from 'next/link';
-import {Logo} from './Logo';
-import {useMediaQuery} from 'react-responsive';
+import { Logo } from './Logo';
+import { useMediaQuery } from 'react-responsive';
 
 export const Header = () => {
   const isMobile = useMediaQuery({
@@ -44,11 +44,11 @@ export const Header = () => {
 };
 
 const Grid = styled('div', {
-  'display': 'Grid',
-  'gridTemplateColumns': '10px 1fr 10px',
-  'maxWidth': '900',
-  'alignItems': 'center',
-  'height': 'inherit',
+  display: 'Grid',
+  gridTemplateColumns: '10px 1fr 10px',
+  maxWidth: '900',
+  alignItems: 'center',
+  height: 'inherit',
   '@bp1': {
     gridTemplateColumns: '1fr 4fr 1fr',
   },
@@ -69,8 +69,8 @@ const Nav = styled('nav', {
 });
 
 const Links = styled('ul', {
-  'listStyle': 'none',
-  'display': 'flex',
+  listStyle: 'none',
+  display: 'flex',
 
   '& a': {
     textDecoration: 'none',

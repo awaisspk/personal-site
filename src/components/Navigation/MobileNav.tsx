@@ -1,35 +1,35 @@
-import { styled } from "@stitchesConfig";
-import { motion, Variants } from "framer-motion";
-import { useState } from "react";
-import { navLinks, socialLinks } from "@src/data";
-import Link from "next/link";
-import { useMediaQuery } from "react-responsive";
+import { styled } from '@stitchesConfig';
+import { motion, Variants } from 'framer-motion';
+import { useState } from 'react';
+import { navLinks, socialLinks } from '@src/data';
+import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 
 export const MobileNav = () => {
   const [isActive, setIsActive] = useState(false);
   const isMobile = useMediaQuery({
-    query: "(max-width : 420px)",
+    query: '(max-width : 420px)',
   });
 
   const ArrowVarients: Variants = {
     open: {
-      y: "100%",
-      d: "M 2 12 L 16 7.00129 L 30 12",
+      y: '100%',
+      d: 'M 2 12 L 16 7.00129 L 30 12',
     },
     close: {
-      y: "-80%",
-      d: "M 2 12 L 16 12.00129 L 30 12",
+      y: '-80%',
+      d: 'M 2 12 L 16 12.00129 L 30 12',
     },
   };
 
   const pathVarients: Variants = {
     arrow: {
-      d: "M 2 12 L 16 7.00129 L 30 12",
-      stroke: "rgba(255, 255, 255, 1)", // animate color
+      d: 'M 2 12 L 16 7.00129 L 30 12',
+      stroke: 'rgba(255, 255, 255, 1)', // animate color
     },
     line: {
-      d: "M 2 12 L 16 12.00129 L 30 12",
-      stroke: "rgba(0, 0, 255, 1)", // animate color
+      d: 'M 2 12 L 16 12.00129 L 30 12',
+      stroke: 'rgba(0, 0, 255, 1)', // animate color
     },
   };
 
@@ -44,21 +44,21 @@ export const MobileNav = () => {
             if (info.offset.y > 10) setIsActive(false);
           }}
           style={{
-            pointerEvents: isActive ? "all" : "none",
+            pointerEvents: isActive ? 'all' : 'none',
           }}
         >
           <motion.div
-            initial={{ y: "95%" }}
-            animate={{ opacity: 1, y: isActive ? 0 : "95%" }}
+            initial={{ y: '95%' }}
+            animate={{ opacity: 1, y: isActive ? 0 : '95%' }}
             style={{
-              pointerEvents: "all",
-              height: "100%",
+              pointerEvents: 'all',
+              height: '100%',
             }}
           >
             <SvgContainer
               initial="close"
               variants={ArrowVarients}
-              animate={isActive ? "open" : "close"}
+              animate={isActive ? 'open' : 'close'}
               onClick={() => setIsActive(true)}
             >
               <svg
@@ -71,7 +71,7 @@ export const MobileNav = () => {
               >
                 <motion.path
                   fill="transparent"
-                  animate={isActive ? "line" : "arrow"}
+                  animate={isActive ? 'line' : 'arrow'}
                   variants={pathVarients}
                 ></motion.path>
               </svg>
@@ -94,7 +94,7 @@ export const MobileNav = () => {
       {isMobile && (
         <Overlay
           style={{
-            pointerEvents: isActive ? "all" : "none",
+            pointerEvents: isActive ? 'all' : 'none',
           }}
           onClick={() => setIsActive(false)}
           initial={{ opacity: 0 }}
@@ -106,37 +106,37 @@ export const MobileNav = () => {
 };
 
 const SvgContainer = styled(motion.div, {
-  width: "calc(1.5 * 30px)",
-  margin: "auto",
+  width: 'calc(1.5 * 30px)',
+  margin: 'auto',
 });
 
 const Navigation = styled(motion.nav, {
-  height: "100%",
-  padding: "2em",
-  background: "white",
-  borderRadius: "1rem",
-  display: "grid",
-  gridTemplateRows: "1fr 1fr",
-  gridTemplateColumns: "1fr 1fr 1fr",
-  placeItems: "center",
-  placeContent: "center",
+  height: '100%',
+  padding: '2em',
+  background: 'white',
+  borderRadius: '1rem',
+  display: 'grid',
+  gridTemplateRows: '1fr 1fr',
+  gridTemplateColumns: '1fr 1fr 1fr',
+  placeItems: 'center',
+  placeContent: 'center',
 });
 
 const Wrapper = styled(motion.div, {
-  position: "fixed",
-  width: "100%",
-  height: "50%",
+  position: 'fixed',
+  width: '100%',
+  height: '50%',
   bottom: 0,
   left: 0,
   zIndex: 12,
 });
 
 const Overlay = styled(motion.div, {
-  position: "fixed",
+  position: 'fixed',
   top: 0,
   bottom: 0,
   left: 0,
   right: 0,
-  background: "rgba(0, 0, 0, 0.7)",
+  background: 'rgba(0, 0, 0, 0.7)',
   zIndex: 11,
 });

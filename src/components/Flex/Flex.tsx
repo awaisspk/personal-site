@@ -1,6 +1,6 @@
-import { styled } from "@stitchesConfig";
+import { styled } from '@stitchesConfig';
 
-const Flex = styled("div", {
-  display: "flex",
-  flexWrap: "wrap",
+const Flex = styled('div', {
+  display: 'flex',
+  flexWrap: 'wrap',
 });

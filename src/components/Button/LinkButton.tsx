@@ -1,19 +1,19 @@
-import {motion} from 'framer-motion';
-import {styled} from '@stitchesConfig';
+import { motion } from 'framer-motion';
+import { styled } from '@stitchesConfig';
 
 export const LinkButton = styled(motion.button, {
-  'borderRadius': '3px',
-  'width': '40px',
-  'height': '40px',
-  'cursor': 'pointer',
-  'border': 'none',
-  'backgroundColor': 'transparent',
-  'transition': '0.4s',
-  'display': 'flex',
-  'alignItems': 'center',
-  'justifyContent': 'center',
-  'padding': '0px',
-  'color': '$gray8',
+  borderRadius: '3px',
+  width: '40px',
+  height: '40px',
+  cursor: 'pointer',
+  border: 'none',
+  backgroundColor: 'transparent',
+  transition: '0.4s',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  padding: '0px',
+  color: '$gray8',
 
   '& *': {
     marginLeft: 'auto',

@@ -4,8 +4,8 @@
     "paths": {
       "@src/*": ["src/*"],
       "@lib/*": ["src/lib/*"],
-      "@components/*" : ["src/components/*"],
-      "@stitchesConfig" : ["styles/stitches.config.ts"]
+      "@components/*": ["src/components/*"],
+      "@stitchesConfig": ["styles/stitches.config.ts"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

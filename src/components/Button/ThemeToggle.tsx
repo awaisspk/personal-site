@@ -1,12 +1,12 @@
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { LinkButton } from "./LinkButton";
-import { useTheme } from "next-themes";
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { LinkButton } from './LinkButton';
+import { useTheme } from 'next-themes';
 
 export const ToggleDarkTheme = () => {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    theme === "dark" ? setTheme("light") : setTheme("dark");
+    theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
 
   const duration = 0.7;
@@ -29,7 +29,7 @@ export const ToggleDarkTheme = () => {
     },
   };
 
-  const isChecked = theme === "dark";
+  const isChecked = theme === 'dark';
 
   const scaleMoon = useMotionValue(isChecked ? 1 : 0);
   const scaleSun = useMotionValue(isChecked ? 0 : 1);
@@ -46,7 +46,7 @@ export const ToggleDarkTheme = () => {
       // aria-label={theme.dark ? 'Activate light mode' : 'Activate dark mode'}
       title="Theme toggle"
       initial={false}
-      animate={isChecked ? "checked" : "unchecked"}
+      animate={isChecked ? 'checked' : 'unchecked'}
       transition={{ duration }}
     >
       <motion.svg

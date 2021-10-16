@@ -1,4 +1,4 @@
-import { styled } from "@stitchesConfig";
+import { styled } from '@stitchesConfig';
 
 const Blog = () => {
   return (
@@ -10,11 +10,11 @@ const Blog = () => {
 
 export default Blog;
 
-const Container = styled("div", {
-  display: "grid",
-  gridTemplateColumns: "auto 1fr auto",
-  paddingTop: "250px",
-  "& *": {
-    gridColumn: "2",
+const Container = styled('div', {
+  display: 'grid',
+  gridTemplateColumns: 'auto 1fr auto',
+  paddingTop: '250px',
+  '& *': {
+    gridColumn: '2',
   },
 });

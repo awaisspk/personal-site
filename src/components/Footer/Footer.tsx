@@ -1,7 +1,7 @@
-import {Github} from './Social/Github';
-import {Linkedin} from './Social/LinkedIn';
-import {Twitter} from './Social/Twitter';
-import {styled} from '@stitchesConfig';
+import { Github } from './Social/Github';
+import { Linkedin } from './Social/LinkedIn';
+import { Twitter } from './Social/Twitter';
+import { styled } from '@stitchesConfig';
 
 export const Footer = () => {
   return (
@@ -35,33 +35,33 @@ const FooterContent = styled('div', {
 });
 
 const Grid = styled('div', {
-  'display': 'grid',
-  'gridTemplateColumns': '10px 1fr 10px',
-  'maxWidth': '900',
+  display: 'grid',
+  gridTemplateColumns: '10px 1fr 10px',
+  maxWidth: '900',
 
-  'transition': '0.5s',
-  'height': '130px',
-  'width': '100%',
-  'background': '$bg',
+  transition: '0.5s',
+  height: '130px',
+  width: '100%',
+  background: '$bg',
   '@bp1': {
     gridTemplateColumns: '1fr 4fr 1fr',
   },
 });
 
 const FooterWrapper = styled('div', {
-  'paddingTop': '30px',
-  'marginTop': '30px',
-  'gridColumn': '2',
-  'width': '100%',
-  'zIndex': '4',
-  'display': 'flex',
-  'alignItems': 'center',
-  'color': '$typeface-pri',
-  'fontWeight': '500',
-  'fontSize': '14px',
-  'flexDirection': 'column',
-  'justifyContent': 'space-evenly',
-  'margin': '0 auto',
+  paddingTop: '30px',
+  marginTop: '30px',
+  gridColumn: '2',
+  width: '100%',
+  zIndex: '4',
+  display: 'flex',
+  alignItems: 'center',
+  color: '$typeface-pri',
+  fontWeight: '500',
+  fontSize: '14px',
+  flexDirection: 'column',
+  justifyContent: 'space-evenly',
+  margin: '0 auto',
   '& a ': {
     color: 'inherit',
   },
