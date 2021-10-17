@@ -1,7 +1,7 @@
-import { Github } from './Social/Github';
-import { Linkedin } from './Social/LinkedIn';
-import { Twitter } from './Social/Twitter';
-import { styled } from '@stitchesConfig';
+import {Github} from './Social/Github';
+import {Linkedin} from './Social/LinkedIn';
+import {Twitter} from './Social/Twitter';
+import {styled} from '@stitchesConfig';
 
 export const Footer = () => {
   return (

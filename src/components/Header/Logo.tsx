@@ -1,4 +1,4 @@
-import { styled } from '@stitchesConfig';
+import {styled} from '@stitchesConfig';
 import Link from 'next/link';
 
 export const Logo = () => {

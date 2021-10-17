@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 type TProps = {
   url: string;
 };
-export const Linkedin = ({ url }: TProps) => {
+export const Linkedin = ({url}: TProps) => {
   return (
     <a href={url} target="_blank" rel="noreferrer">
       <svg
@@ -18,18 +18,18 @@ export const Linkedin = ({ url }: TProps) => {
       >
         <motion.path
           d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 1 }}
+          initial={{pathLength: 0}}
+          animate={{pathLength: 1}}
+          transition={{duration: 1}}
         ></motion.path>
         <motion.rect
           x="2"
           y="9"
           width="4"
           // height="12"
-          initial={{ height: '0' }}
-          animate={{ height: '12' }}
-          transition={{ duration: 2 }}
+          initial={{height: '0'}}
+          animate={{height: '12'}}
+          transition={{duration: 2}}
         ></motion.rect>
         <motion.circle cx="4" cy="4" r="2"></motion.circle>
       </svg>

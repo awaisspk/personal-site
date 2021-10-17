@@ -1,4 +1,4 @@
-import { styled } from '@stitchesConfig';
+import {styled} from '@stitchesConfig';
 
 const Blog = () => {
   return (

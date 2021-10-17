@@ -1,5 +1,5 @@
-import { getCssText } from '@stitchesConfig';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import {getCssText} from '@stitchesConfig';
+import Document, {Html, Head, Main, NextScript} from 'next/document';
 
 class MyDocument extends Document {
   render() {
@@ -24,7 +24,7 @@ class MyDocument extends Document {
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <style
             id="stitches"
-            dangerouslySetInnerHTML={{ __html: getCssText() }}
+            dangerouslySetInnerHTML={{__html: getCssText()}}
           />
         </Head>
         <body>

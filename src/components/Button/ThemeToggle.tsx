@@ -1,9 +1,9 @@
-import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { LinkButton } from './LinkButton';
-import { useTheme } from 'next-themes';
+import {motion, useMotionValue, useTransform} from 'framer-motion';
+import {LinkButton} from './LinkButton';
+import {useTheme} from 'next-themes';
 
 export const ToggleDarkTheme = () => {
-  const { theme, setTheme } = useTheme();
+  const {theme, setTheme} = useTheme();
 
   const toggleTheme = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
@@ -47,7 +47,7 @@ export const ToggleDarkTheme = () => {
       title="Theme toggle"
       initial={false}
       animate={isChecked ? 'checked' : 'unchecked'}
-      transition={{ duration }}
+      transition={{duration}}
     >
       <motion.svg
         width="30"
@@ -64,7 +64,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -78,7 +78,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -92,7 +92,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -106,7 +106,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -120,7 +120,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -134,7 +134,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -148,7 +148,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -162,7 +162,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -176,7 +176,7 @@ export const ToggleDarkTheme = () => {
           strokeLinejoin="round"
           variants={sunVariants}
           custom={isChecked}
-          transition={{ duration }}
+          transition={{duration}}
           style={{
             pathLength: pathLengthSun,
             scale: scaleSun,
@@ -188,7 +188,7 @@ export const ToggleDarkTheme = () => {
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          transition={{ duration }}
+          transition={{duration}}
           variants={moonVariants}
           custom={isChecked}
           style={{

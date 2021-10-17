@@ -1,8 +1,8 @@
-import { styled } from '@stitchesConfig';
-import { ToggleDarkTheme } from '../Button';
+import {styled} from '@stitchesConfig';
+import {ToggleDarkTheme} from '../Button';
 import Link from 'next/link';
-import { Logo } from './Logo';
-import { useMediaQuery } from 'react-responsive';
+import {Logo} from './Logo';
+import {useMediaQuery} from 'react-responsive';
 
 export const Header = () => {
   const isMobile = useMediaQuery({

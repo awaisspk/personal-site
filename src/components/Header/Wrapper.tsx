@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import useScrollCount from '@src/hooks/useScrollCount';
-import { styled } from '@stitchesConfig';
-import { Header } from '@components/Header/Header';
+import {styled} from '@stitchesConfig';
+import {Header} from '@components/Header/Header';
 
 export const Wrapper: React.FC = () => {
   const shouldCollapse = useScrollCount(150);
@@ -25,7 +25,7 @@ export const Wrapper: React.FC = () => {
         animate="collapsed"
         variants={variants}
         custom={shouldCollapse}
-        transition={{ ease: 'easeInOut', duration: 0.5 }}
+        transition={{ease: 'easeInOut', duration: 0.5}}
       >
         <Header />
       </HeaderWrapper>

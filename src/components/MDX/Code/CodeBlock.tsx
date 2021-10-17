@@ -1,5 +1,5 @@
-import { styled } from '@stitchesConfig';
-import Hightlight, { defaultProps } from 'prism-react-renderer';
+import {styled} from '@stitchesConfig';
+import Hightlight, {defaultProps} from 'prism-react-renderer';
 import dracula from 'prism-react-renderer/themes/nightOwl';
 
 const exampleCode = `
@@ -19,7 +19,7 @@ export const CodeBlock = () => {
       language="jsx"
       theme={dracula}
     >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+      {({className, style, tokens, getLineProps, getTokenProps}) => (
         <Pre
           className={className}
           style={{
@@ -30,9 +30,9 @@ export const CodeBlock = () => {
           }}
         >
           {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })} key={i}>
+            <div {...getLineProps({line, key: i})} key={i}>
               {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} key={key} />
+                <span {...getTokenProps({token, key})} key={key} />
               ))}
             </div>
           ))}

@@ -1,18 +1,18 @@
-import type { AppProps } from 'next/app';
-import { globalStyles } from 'styles/globalStyles';
+import type {AppProps} from 'next/app';
+import {globalStyles} from 'styles/globalStyles';
 import Head from 'next/head';
-import { ThemeProvider } from 'next-themes';
-import { DarkTheme } from '@stitchesConfig';
-import { Layout } from '@src/Layout';
+import {ThemeProvider} from 'next-themes';
+import {DarkTheme} from '@stitchesConfig';
+import {Layout} from '@src/Layout';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({Component, pageProps}: AppProps) {
   globalStyles();
   return (
     <ThemeProvider
       attribute="class"
       defaultTheme="dark"
       enableSystem={false}
-      value={{ dark: DarkTheme.className, light: 'light' }}
+      value={{dark: DarkTheme.className, light: 'light'}}
     >
       <Layout>
         <Head>

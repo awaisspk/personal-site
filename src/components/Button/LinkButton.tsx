@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { styled } from '@stitchesConfig';
+import {motion} from 'framer-motion';
+import {styled} from '@stitchesConfig';
 
 export const LinkButton = styled(motion.button, {
   borderRadius: '3px',

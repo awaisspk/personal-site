@@ -1,9 +1,9 @@
-import { styled } from '@stitchesConfig';
-import { motion, Variants } from 'framer-motion';
-import { useState } from 'react';
-import { navLinks, socialLinks } from '@src/data';
+import {styled} from '@stitchesConfig';
+import {motion, Variants} from 'framer-motion';
+import {useState} from 'react';
+import {navLinks, socialLinks} from '@src/data';
 import Link from 'next/link';
-import { useMediaQuery } from 'react-responsive';
+import {useMediaQuery} from 'react-responsive';
 
 export const MobileNav = () => {
   const [isActive, setIsActive] = useState(false);
@@ -38,8 +38,8 @@ export const MobileNav = () => {
       {isMobile && (
         <Wrapper
           drag="y"
-          dragConstraints={{ top: 0, bottom: 0 }}
-          dragElastic={{ top: 0, bottom: 0.3 }}
+          dragConstraints={{top: 0, bottom: 0}}
+          dragElastic={{top: 0, bottom: 0.3}}
           onDragEnd={(_, info) => {
             if (info.offset.y > 10) setIsActive(false);
           }}
@@ -48,8 +48,8 @@ export const MobileNav = () => {
           }}
         >
           <motion.div
-            initial={{ y: '95%' }}
-            animate={{ opacity: 1, y: isActive ? 0 : '95%' }}
+            initial={{y: '95%'}}
+            animate={{opacity: 1, y: isActive ? 0 : '95%'}}
             style={{
               pointerEvents: 'all',
               height: '100%',
@@ -97,8 +97,8 @@ export const MobileNav = () => {
             pointerEvents: isActive ? 'all' : 'none',
           }}
           onClick={() => setIsActive(false)}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isActive ? 1 : 0 }}
+          initial={{opacity: 0}}
+          animate={{opacity: isActive ? 1 : 0}}
         />
       )}
     </>

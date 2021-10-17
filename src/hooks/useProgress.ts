@@ -1,9 +1,9 @@
-import { useViewportScroll } from 'framer-motion';
+import {useViewportScroll} from 'framer-motion';
 import React from 'react';
 
 const useProgress = () => {
   const [readingProgress, setReadingProgress] = React.useState(0);
-  const { scrollYProgress } = useViewportScroll();
+  const {scrollYProgress} = useViewportScroll();
 
   React.useEffect(
     () =>

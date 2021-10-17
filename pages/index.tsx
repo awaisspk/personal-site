@@ -1,6 +1,6 @@
-import { CodeBlock } from '@src/components/MDX/Code/CodeBlock';
-import { styled } from '@stitchesConfig';
-import type { NextPage } from 'next';
+import {CodeBlock} from '@src/components/MDX/Code/CodeBlock';
+import {styled} from '@stitchesConfig';
+import type {NextPage} from 'next';
 
 const Home: NextPage = () => {
   return (

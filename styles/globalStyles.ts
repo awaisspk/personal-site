@@ -1,9 +1,9 @@
-import { globalCss } from '@stitchesConfig';
-import { opinionated } from 'stitches-normalize-css';
+import {globalCss} from '@stitchesConfig';
+import {opinionated} from 'stitches-normalize-css';
 
 // @ts-ignore
 export const globalStyles = globalCss(...opinionated, {
-  '*': { margin: '0', padding: '0' },
+  '*': {margin: '0', padding: '0'},
   body: {
     backgroundColor: '$bg',
     transition: '0.5s',
