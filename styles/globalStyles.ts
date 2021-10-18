@@ -17,7 +17,6 @@ export const globalStyles = globalCss(...opinionated, {
   },
   '&:focus-visible': {
     outline: '2px solid $colors$main',
-    // backgroundColor : ''
   },
   '::selection': {
     backgroundColor: '#1c2230',

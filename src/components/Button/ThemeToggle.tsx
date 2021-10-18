@@ -38,12 +38,10 @@ export const ToggleDarkTheme = () => {
 
   return (
     <LinkButton
-      data-testid="darkmode-switch"
       aria-describedby="lightDarkSwitcherTooltip"
       onClick={() => {
         toggleTheme();
       }}
-      // aria-label={theme.dark ? 'Activate light mode' : 'Activate dark mode'}
       title="Theme toggle"
       initial={false}
       animate={isChecked ? 'checked' : 'unchecked'}

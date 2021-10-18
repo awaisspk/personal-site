@@ -12,8 +12,8 @@ export const Layout: React.FC = ({children}) => {
   return (
     <Wrapper>
       <Header />
-      {/* {children} */}
-      {/* {isDesktop ? <Footer /> : <MobileNav />} */}
+      {children}
+      {isDesktop ? <Footer /> : <MobileNav />}
     </Wrapper>
   );
 };

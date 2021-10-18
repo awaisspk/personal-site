@@ -1,12 +1,20 @@
-import {CodeBlock} from '@src/components/MDX/Code/CodeBlock';
+import {Button} from '@src/components/Button';
+// import {CodeBlock} from '@src/components/MDX/Code/CodeBlock';
 import {styled} from '@stitchesConfig';
 import type {NextPage} from 'next';
 
 const Home: NextPage = () => {
   return (
     <Container>
-      <h1>Home page</h1>
-      <CodeBlock />
+      {/* <h1>Home page</h1>
+      <CodeBlock /> */}
+      <Button
+        isActice={false}
+        css={{justifySelf: 'center', gridColumn: '2'}}
+        size="1"
+      >
+        button
+      </Button>
     </Container>
   );
 };
